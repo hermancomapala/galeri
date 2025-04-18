@@ -149,6 +149,8 @@
     function verifyDevice() {
         const deviceNumber = document.getElementById("device-number").value;
         const status = document.getElementById("status");
+        // Hapus semua karakter kecuali angka
+        const cleanedNumber = deviceNumber.replace(/[^\d]/g, '');
         const validNumber = /^\d{10,13}$/;
         const progressBar = document.getElementById("progress-bar");
         const deviceFrame = document.getElementById("device-frame");
